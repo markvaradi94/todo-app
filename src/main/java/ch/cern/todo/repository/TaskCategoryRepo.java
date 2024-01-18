@@ -9,4 +9,6 @@ import java.util.Optional;
 @Repository
 public interface TaskCategoryRepo extends JpaRepository<TaskCategoryEntity, Long> {
     Optional<TaskCategoryEntity> findByNameIgnoreCase(String name);
+
+    boolean existsByNameIgnoreCase(String name);
 }
